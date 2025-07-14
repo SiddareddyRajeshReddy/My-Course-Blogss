@@ -29,10 +29,10 @@ const Navbar = () => {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-6">
-            <a href="#" className="text-gray-700 hover:text-blue-600">Home</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600">About</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600">Services</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600">Contact</a>
+            <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
+            <a href="/resources   " className="text-gray-700 hover:text-blue-600">Resources</a>
+            <a href="/" className="text-gray-700 hover:text-blue-600">Services</a>
+            <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -62,10 +62,10 @@ const Navbar = () => {
             placeholder="Search..."
             className="bg-white w-[80%] px-3 py-1 rounded-md border border-gray-300 mb-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-          <a href="#" className="block text-gray-700 hover:text-blue-600">Home</a>
-          <a href="#" className="block text-gray-700 hover:text-blue-600">About</a>
-          <a href="#" className="block text-gray-700 hover:text-blue-600">Services</a>
-          <a href="#" className="block text-gray-700 hover:text-blue-600">Contact</a>
+          <a href="/" className="block text-gray-700 hover:text-blue-600">Home</a>
+          <a href="/resources" className="block text-gray-700 hover:text-blue-600">Resources</a>
+          <a href="/" className="block text-gray-700 hover:text-blue-600">Services</a>
+          <a href="/contact" className="block text-gray-700 hover:text-blue-600">Contact</a>
         </div>
       )}
     </nav>
