@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [course, setName] = useState("")
@@ -29,10 +29,41 @@ const Navbar = () => {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-6">
-            <Link to="/" className='text-gray-700 hover:text-blue-600'>Home</Link>
-            <Link to="/resources" className="text-gray-700 hover:text-blue-600">Resources</Link>
-            <Link to="/" className="text-gray-700 hover:text-blue-600">Services</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `block hover:text-blue-600 ${isActive ? "text-blue-600 underline" : "text-gray-700"}`
+              }
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              to="/resources"
+              className={({ isActive }) =>
+                `block hover:text-blue-600 ${isActive ? "text-blue-600 underline" : "text-gray-700"}`
+              }
+            >
+              Resources
+            </NavLink>
+
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                `block hover:text-blue-600 ${isActive ? "text-blue-600 underline" : "text-gray-700 "}`
+              }
+            >
+              Services
+            </NavLink>
+
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `block hover:text-blue-600 ${isActive ? "text-blue-600 underline" : "text-gray-700"}`
+              }
+            >
+              Contact
+            </NavLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -62,10 +93,41 @@ const Navbar = () => {
             placeholder="Search..."
             className="bg-white w-[80%] px-3 py-1 rounded-md border border-gray-300 mb-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-          <Link to="/" className='block text-gray-700 hover:text-blue-600'>Home</Link>
-          <Link to="/resources" className="block text-gray-700 hover:text-blue-600">Resources</Link>
-          <Link to="/" className="block text-gray-700 hover:text-blue-600">Services</Link>
-          <Link to="/contact" className="block text-gray-700 hover:text-blue-600">Contact</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `block text-gray-700 hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`
+            }
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="/resources"
+            className={({ isActive }) =>
+              `block text-gray-700 hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`
+            }
+          >
+            Resources
+          </NavLink>
+
+          <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              `block text-gray-700 hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`
+            }
+          >
+            Services
+          </NavLink>
+
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `block text-gray-700 hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`
+            }
+          >
+            Contact
+          </NavLink>
         </div>
       )}
     </nav>
