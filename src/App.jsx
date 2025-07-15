@@ -9,23 +9,21 @@ function App() {
     [
       {
         path: "/",
-        element: <Home />
+        element:  <><Navbar /><Home /><Footer /></>
       },
       {
         path: "/contact",
-        element: <Contact />
+        element: <><Navbar /><Contact /><Footer /></>
       },
        {
         path: "/resources",
-        element: <Resources />
+        element: <><Navbar /><Resources /><Footer /></>
       }
     ]
   )
   return (
     <>
-    <Navbar />
     <RouterProvider router={router}/>
-    <Footer />
     </>
   )
 }
