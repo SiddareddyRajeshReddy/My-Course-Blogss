@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { memo } from 'react';
+import { NavLink } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white bottom-0 min-h-[20vh]">
@@ -17,10 +18,41 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white">Home</a></li>
-              <li><a href="#" className="hover:text-white">About</a></li>
-              <li><a href="#" className="hover:text-white">Services</a></li>
-              <li><a href="#" className="hover:text-white">Contact</a></li>
+               <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `block hover:text-white ${isActive ? "text-white underline" : "text-gray-700"}`
+              }
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              to="/resources"
+             className={({ isActive }) =>
+                `block hover:text-white ${isActive ? "text-white underline" : "text-gray-700"}`
+              }
+            >
+              Resources
+            </NavLink>
+
+            <NavLink
+              to="/services"
+               className={({ isActive }) =>
+                `block hover:text-white ${isActive ? "text-white underline" : "text-gray-700"}`
+              }
+            >
+              Services
+            </NavLink>
+
+            <NavLink
+              to="/contact"
+               className={({ isActive }) =>
+                `block hover:text-white ${isActive ? "text-white underline" : "text-gray-700"}`
+              }
+            >
+              Contact
+            </NavLink>
             </ul>
           </div>
 
@@ -46,4 +78,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

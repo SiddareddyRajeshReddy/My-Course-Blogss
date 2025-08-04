@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useEffect, useRef } from 'react';
+import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -93,45 +93,45 @@ const Navbar = () => {
             placeholder="Search..."
             className="bg-white w-[80%] px-3 py-1 rounded-md border border-gray-300 mb-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `block text-gray-700 hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`
-            }
-          >
-            Home
-          </NavLink>
+           <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `block hover:text-blue-600 ${isActive ? "text-blue-600 underline" : "text-gray-700"}`
+              }
+            >
+              Home
+            </NavLink>
 
-          <NavLink
-            to="/resources"
-            className={({ isActive }) =>
-              `block text-gray-700 hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`
-            }
-          >
-            Resources
-          </NavLink>
+            <NavLink
+              to="/resources"
+              className={({ isActive }) =>
+                `block hover:text-blue-600 ${isActive ? "text-blue-600 underline" : "text-gray-700"}`
+              }
+            >
+              Resources
+            </NavLink>
 
-          <NavLink
-            to="/services"
-            className={({ isActive }) =>
-              `block text-gray-700 hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`
-            }
-          >
-            Services
-          </NavLink>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                `block hover:text-blue-600 ${isActive ? "text-blue-600 underline" : "text-gray-700 "}`
+              }
+            >
+              Services
+            </NavLink>
 
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `block text-gray-700 hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`
-            }
-          >
-            Contact
-          </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `block hover:text-blue-600 ${isActive ? "text-blue-600 underline" : "text-gray-700"}`
+              }
+            >
+              Contact
+            </NavLink>
         </div>
       )}
     </nav>
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

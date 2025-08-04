@@ -39,7 +39,7 @@ const BlogSection = () => {
         <h2 className="text-3xl font-bold text-center text-blue-500 mb-10">Latest Blogs</h2>      
         <div className="grid md:grid-cols-3 gap-8">
           {blogs.map((blog, index) => (
-            <Blog index={index} title={blog.title} excerpt={blog.excerpt} date={blog.date} author={blog.author} url={blog.url}/>
+            <Blog blog={blog} index={index} />
           ))}
         </div>
       </div>
