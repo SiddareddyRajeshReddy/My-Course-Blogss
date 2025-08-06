@@ -5,9 +5,7 @@ const Home = () => {
         <div className="bg-[url(/background.png)] bg-blue-200 py-[100px] min-h-screen py-12 px-4 bg-center bg-cover">
             
             <div className="sm:px-6 lg:px-8 cursor-pointer">
-                {/* Page Title */}
-                <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">About Me</h1>
-                {/* Profile Image */}
+               <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">About Me</h1>
                 <div className="flex justify-center mb-10">
                     <div className="relative group">
                         <img
@@ -18,7 +16,6 @@ const Home = () => {
                         <div className="absolute inset-0 rounded-full bg-gray-900 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                     </div>
                 </div>
-                {/* Personal Details */}
                 <div className="max-w-2xl mx-auto text-center">
                     <h2 className="text-3xl font-bold text-gray-800 mb-2 hover:underline">Siddareddy Rajesh Reddy</h2>
                     <p className="text-xl text-blue-600 font-medium mb-6">Pre-Final Year Student</p>
@@ -32,7 +29,6 @@ const Home = () => {
                             <span className="font-bold">Involvements:</span> DevCans, Web Development Cell
                         </p>
                     </div>
-                    {/* Page Description */}
                     <h1 className="text-3xl font-bold text-center text-gray-800 mb-12">About this page</h1>
                     <div className="max-w-2xl mx-auto text-center mb-12 font-semibold">
                         <p className="text-lg text-gray-950">
@@ -43,7 +39,6 @@ const Home = () => {
                         </p>
                     </div>
 
-                    {/* Social Links */}
                     <div className="flex justify-center gap-4 mt-8 flex-wrap">
                         <a
                             href="https://www.linkedin.com/in/s-rajesh-reddy/"
@@ -86,7 +81,6 @@ const Home = () => {
                         </a>
                     </div>
                 </div>
-                {/* Contact Information */}
                 <div className="mt-8 text-center">
                     <h3 className="text-xl font-semibold text-gray-950 mb-4">Contact Me</h3>
                     <div className="flex flex-col justify-center items-center space-y-2 text-gray-800 font-semibold">
